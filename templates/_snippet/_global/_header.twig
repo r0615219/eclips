@@ -1,0 +1,13 @@
+{% if logo.image|length %}
+    <div class="wrapper row1">
+        <header id="header" class="hoc clear">
+            <a href="{{ siteUrl }}" id="logo" class="fl_left">
+                <img src="{{ logo.image.one().getUrl() }}" style="width: 150px;" alt="{{ siteName }}">
+            </a>
+        </header>
+    </div>
+{% endif %}
+
+<div class="wrapper row2">
+    {% include '_snippet/_global/_nav' %}
+</div>

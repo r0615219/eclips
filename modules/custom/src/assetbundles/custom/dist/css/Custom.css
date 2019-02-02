@@ -1,0 +1,26 @@
+/**
+ * Custom module for Craft CMS
+ *
+ * Custom CSS
+ *
+ * @author    Caroline Boeykens
+ * @copyright Copyright (c) 2018 Caroline Boeykens
+ * @link      http://carolineboeykens.be
+ * @package   Custom
+ * @since     1.0.0
+ */
+
+/* Green buttons */
+.btn.submit {
+    background-image: linear-gradient(#82b1f7, #629df5);
+}
+
+.btn.submit:not(.disabled):not(.inactive):hover, .btn.submit:not(.disabled):not(.inactive).hover,
+.btn.submit:not(.disabled):not(.inactive):active, .btn.submit:not(.disabled):not(.inactive).active {
+    background-image: linear-gradient(#5293f4, #327ff2);
+}
+
+/* Margin at plugins page */
+#plugins {
+    margin-bottom: 10rem;
+}

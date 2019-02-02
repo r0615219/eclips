@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>{{ entry.title }} | {{ siteName }}</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Charmonman" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+          integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <!-- Fancybox -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css"/>
+
+    <!-- Custom -->
+    <link href="{{ siteUrl }}layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+    <link href="{{ siteUrl }}layout/styles/nav.css" rel="stylesheet" type="text/css">
+    <link href="{{ siteUrl }}layout/styles/custom.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+
+{% include '_snippet/_global/_header' %}
+
+{% block content %}{% endblock %}
+
+{% include '_snippet/_global/_footer' %}
+
+
+<script src="{{ siteUrl }}layout/scripts/jquery.min.js"></script>
+{#<script src="{{ siteUrl }}layout/scripts/jquery.flexslider-min.js"></script>#}
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js"></script>
+<script src="{{ siteUrl }}js/classie.js"></script>
+<script src="{{ siteUrl }}js/custom.js"></script>
+
+</body>
+</html>

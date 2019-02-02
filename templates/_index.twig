@@ -1,0 +1,37 @@
+{% extends '_layout' %}
+
+{% block content %}
+
+    <img class="hero--image" src="{{ entry.hero|default(fallback.image).one().getUrl() }}" alt="{{ siteName }}">
+
+    {% if entry.intro|length %}
+        <div class="row4">
+            <div class="hoc container clear">
+                {{ entry.intro }}
+            </div>
+        </div>
+    {% endif %}
+
+    <div class="wrapper row3">
+        <main class="hoc container clear">
+            <!-- main body -->
+            <ul class="nospace group services flex">
+                {% for page in craft.entries.section('overviewPages').all() %}
+                    <li class="flex__item">
+                        <article class="bgded overlay" style="background-image:url({{ page.overviewImage.one().getUrl('overviewImage') }});">
+                            <a href="{{ page.url }}">
+                                <div class="txtwrap">
+                                    <h6 class="heading mt-32">{{ page.overviewTitle ?? page.title }}</h6>
+                                    <div class="mb-32">{{ page.overviewDescription }}</div>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
+                {% endfor %}
+            </ul>
+            <!-- / main body -->
+            <div class="clear"></div>
+        </main>
+    </div>
+
+{% endblock %}

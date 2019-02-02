@@ -1,0 +1,31 @@
+{% extends '_layout' %}
+
+{% block content %}
+
+    <div class="wrapper row4">
+        <div class="hoc container clear">
+            <h1>{{ entry.title }}</h1>
+            {% if entry.intro|length %}
+                {{ entry.intro }}
+            {% endif %}
+        </div>
+    </div>
+
+    {% if entry.work|length %}
+        <div class="wrapper row3">
+            <div class="hoc container clear">
+                <ul class="nospace group flex mt-32">
+                    {% for work in entry.work.all() %}
+                        {% if work.image|length %}
+                            <a data-fancybox="gallery" href="{{ work.image.one().getUrl() }}" class="flex_gallery">
+                                <img class="flex_img" src="{{ work.image.one().getUrl('galleryImage') }}"
+                                     alt="{{ work.title }}">
+                            </a>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+                <div class="clear"></div>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}

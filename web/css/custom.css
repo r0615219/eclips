@@ -1,0 +1,11 @@
+.panel {
+	display: block;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 20px;
+}
+
+.bg-light {
+	background-color: #eef1f3 !important;
+}

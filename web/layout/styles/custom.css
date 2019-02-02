@@ -1,0 +1,35 @@
+.mt-32 {margin-top: 32px !important;}
+.mb-32 {margin-bottom: 32px !important;}
+
+.hero--image {
+	width: 100%;
+}
+.row2 a {color: #FFF;}
+.row2 a:hover, .row2 a:focus {color: #83c9ea;}
+
+.flex {
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+
+.flex__item {
+	display: flex;
+	flex-direction: column;
+	align-content: stretch;
+	width: 31%;
+	margin: 10px;
+}
+
+.flex__item article, .flex__item article .txtwrap {
+	height: 100%;
+}
+
+.flex__item article a {
+	color: #ddd;
+}
+
+.flex_gallery {
+	margin: 15px;
+	width: 30%;
+}

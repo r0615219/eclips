@@ -1,0 +1,53 @@
+<div class="wrapper row2">
+    <footer id="footer" class="hoc clear">
+        <div class="two_third first">
+            <h4>{{ contactInfo.blockTitle|nl2br }}</h4>
+            <ul class="nospace btmspace-30 linklist contact">
+                {% if contactInfo.address|length %}
+                    <li><i class="fa fa-map-marker"></i>
+                        <address>
+                            {{ contactInfo.address.street }}, {{ contactInfo.address.city }}
+                        </address>
+                    </li>
+                {% endif %}
+                {% if contactInfo.phone|length %}
+                    <li><i class="fa fa-phone"></i> <a href="tel:{{ contactInfo.phone }}">{{ contactInfo.phone }}</a></li>
+                {% endif %}
+                {% if contactInfo.email|length %}
+                    <li><i class="fa fa-envelope-o"></i> <a href="mailto:{{ contactInfo.email }}">{{ contactInfo.email }}</a></li>
+                {% endif %}
+            </ul>
+            <ul class="faico clear">
+                {% if contactInfo.facebook|length %}
+                    <li><a href="{{ contactInfo.facebook }}" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                {% endif %}
+                {% if contactInfo.twitter|length %}
+                    <li><a href="{{ contactInfo.twitter }}" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                {% endif %}
+                {% if contactInfo.instagram|length %}
+                    <li><a href="{{ contactInfo.instagram }}" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                {% endif %}
+                {% if contactInfo.linkedin|length %}
+                    <li><a href="{{ contactInfo.linkedin }}" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                {% endif %}
+                {% if contactInfo.youtube|length %}
+                    <li><a href="{{ contactInfo.youtube }}" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                {% endif %}
+            </ul>
+        </div>
+        <div class="one_third" style="text-align: right">
+            <ul class="nospace btmspace-30 linklist">
+                {% for item in mainNavigation.navigation.all() %}
+                    <li><a href="{{ item.linkItem.one().getUrl() }}">{{ item.linkItem.one().title }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </footer>
+</div>
+<div class="wrapper row5">
+    <div id="copyright" class="hoc clear">
+        <p class="fl_left">&copy; {{ now|date('Y') }} - <a href="{{ siteUrl }}">Eclips Communication Design</a></p>
+        <p class="fl_right">Powered by <a target="_blank" href="http://carolineboeykens.be">carolineboeykens</a>
+        </p>
+    </div>
+</div>
